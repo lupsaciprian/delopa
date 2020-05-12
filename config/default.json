@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://progaon_mongodb:39OyNPPpGIbjo5gD@progaon-3pflg.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecretoken123",
+  "githubClientId": "23fe636b6eb6d7b9edf9",
+  "githubSecret": "cde93774fc25577c519aef9789879854e3673ef6"
+}

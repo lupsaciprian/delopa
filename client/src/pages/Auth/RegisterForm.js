@@ -1,0 +1,103 @@
+export default [
+  {
+    type: 'SimpleTextField',
+    id: 'RegisterUsername',
+    name: 'register_name',
+    value: '',
+    options: {
+      type: 'text',
+      variant: 'outlined',
+      margin: 'normal',
+      fullWidth: true,
+      id: 'name',
+      label: 'Username *',
+      autoComplete: 'name',
+    },
+    validation: {
+      required: true,
+    },
+  },
+  {
+    type: 'SimpleTextField',
+    id: 'RegisterConfirmEmail',
+    name: 'register_email',
+    value: '',
+    options: {
+      type: 'email',
+      variant: 'outlined',
+      margin: 'normal',
+      fullWidth: true,
+      id: 'registerEmail',
+      label: 'Email Adress *',
+      autoComplete: 'email',
+    },
+    validation: {
+      required: true,
+      email: true,
+    },
+  },
+  {
+    type: 'SimpleTextField',
+    id: 'RegisterPassword',
+    name: 'register_password',
+    value: '',
+    options: {
+      type: 'password',
+      variant: 'outlined',
+      margin: 'normal',
+      required: true,
+      fullWidth: true,
+      id: 'registerPassword',
+      label: 'Password',
+      autoComplete: 'password',
+    },
+    validation: {
+      required: true,
+      match: 'register_confirmPassword',
+      min: {
+        value: 6,
+        message: 'Please enter a password with at least 6 characters.',
+      },
+    },
+  },
+  {
+    type: 'SimpleTextField',
+    id: 'RegisterConfirmPassword',
+    name: 'register_confirmPassword',
+    value: '',
+    options: {
+      type: 'password',
+      variant: 'outlined',
+      margin: 'normal',
+      required: true,
+      fullWidth: true,
+      id: 'registerConfirmPassword',
+      label: 'Confirm Password',
+      autoComplete: 'confirmPassword',
+    },
+    validation: {
+      required: true,
+      match: 'register_password',
+      min: {
+        value: 6,
+        message: 'Please enter a password with at least 6 characters.',
+      },
+    },
+  },
+
+  {
+    type: 'SimpleCheckbox',
+    id: 'RegisterConfirmRememberMe',
+    name: 'register_rememberMe',
+    value: false,
+    options: {
+      // type: 'email',
+      // variant: 'outlined',
+      // margin: 'normal',
+      // fullWidth: true,
+      // id: 'email',
+      label: 'Keep me logged in',
+      // autoComplete: 'email',
+    },
+  },
+];

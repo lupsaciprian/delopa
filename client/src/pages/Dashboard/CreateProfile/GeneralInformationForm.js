@@ -1,0 +1,102 @@
+export default [
+  {
+    type: 'SimpleTextField',
+    id: 'CreateProfileAdress',
+    name: 'cp_adress',
+    value: '',
+    options: {
+      type: 'text',
+      variant: 'outlined',
+      margin: 'normal',
+      fullWidth: true,
+      id: 'cp_adress',
+      label: 'Your adress',
+      autoComplete: 'cp_adress',
+      autoFocus: true,
+    },
+    validation: {
+      required: true,
+    },
+  },
+  {
+    type: 'SimpleMultilineField',
+    id: 'CreateProfileDescription',
+    name: 'cp_description',
+    value: '',
+    options: {
+      type: 'text',
+      multiline: true,
+      rows: 6,
+      variant: 'outlined',
+      margin: 'normal',
+      fullWidth: true,
+      id: 'cp_description',
+      label: 'Enter a short description about yourself!',
+      autoComplete: 'cp_description',
+    },
+    validation: {
+      required: true,
+    },
+  },
+  {
+    type: 'ChipMultiSelect',
+    id: 'CreateProfileSkills',
+    name: 'cp_skills',
+    value: [],
+    selectOptions: [
+      { id: 'js', value: 'Javascript', devIcon: 'javascript' },
+      { id: 'html', value: 'HTML5', devIcon: 'html5' },
+      { id: 'css', value: 'CSS3', devIcon: 'css3' },
+    ],
+    options: {
+      multiple: true,
+      variant: 'outlined',
+      margin: 'dense',
+      fullWidth: true,
+      id: 'cp_skills',
+      label: 'Your skills',
+    },
+    validation: {
+      type: 'array',
+      minArray: {
+        value: 1,
+        message: 'Please add at least one skill',
+      },
+    },
+  },
+  {
+    type: 'SimpleTextField',
+    id: 'CreateProfileCompany',
+    name: 'cp_company',
+    value: '',
+    options: {
+      type: 'text',
+      variant: 'outlined',
+      margin: 'normal',
+      fullWidth: true,
+      id: 'cp_company',
+      label: 'Your company',
+      autoComplete: 'cp_company',
+    },
+  },
+  {
+    type: 'FieldArray',
+    id: 'CreateProfileSocialLinks',
+    name: 'cp_sociallinks',
+    mainLabel: 'Social Media',
+    value: [],
+    field: {
+      type: 'SimpleTextField',
+      options: {
+        type: 'text',
+        variant: 'outlined',
+        margin: 'normal',
+        fullWidth: true,
+        label: 'Social media link',
+      },
+      validation: {
+        required: true,
+      },
+    },
+  },
+];
